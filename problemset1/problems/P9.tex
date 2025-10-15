@@ -1,0 +1,54 @@
+\section*{Problem 9}
+
+Using values from the PREM model, compute values for the bulk modulus on both sides of 
+
+\textbf{(a)} the core-mantle boundary (CMB)\\
+\textbf{(b)} the inner-core boundary 
+
+Express your answers in pascals.
+
+\subsection*{Solution}
+
+We start by deriving an equation for the bulk modulus in terms of the speed of P and S waves. From the given formulas we have:
+
+\begin{equation*}
+    \beta^2 = \frac{\mu}{\rho}, \quad \mu = \rho \beta^2
+\end{equation*}
+\begin{equation*}
+    \alpha^2 = \frac{\lambda + 2 \mu}{\rho} = \frac{\lambda + 2 \rho \beta}{\rho}, \quad \lambda = \rho \alpha^2 - 2 \rho \beta^2
+\end{equation*}
+
+Now
+
+\begin{equation*}
+    \kappa = \lambda + \frac{2}{3} \mu = 
+    \rho \alpha^2 - 2 \rho \beta^2 + \frac{2}{3} \rho \beta^2 = 
+    \rho(\alpha^2 - \frac{4}{3} \beta^2)
+\end{equation*}
+
+Now that we have the equation, we need to think about units. To get the answer in Pa we have to transform the units in the table to SI units, this happens to be a factor of a 1000 for each parameter, resulting in a total factor of $10^{9}$. We can therefore calculate with the units in the table and get the answer in GPa.
+
+We also note that S waves do not probagate in liquid so we can see the estimated boundaries in the table from that. Finally we can do the calculations
+
+\subsection*{(a)}
+\subsubsection*{Above the boundary}
+\begin{equation*}
+    5.57\times(13.72^2 - \frac{4}{3}\times 7.26^2) = 657 \; \text{GPa}
+\end{equation*}
+
+\subsubsection*{Below the boundary}
+\begin{equation*}
+    9.90\times(8.06^2 - \frac{4}{3}\times 0^2) = 643 \; \text{GPa}
+\end{equation*}
+
+
+\subsection*{(b)}
+\subsubsection*{Above the boundary}
+\begin{equation*}
+    12.17\times(10.36^2 - \frac{4}{3}\times 0^2) = 1306 \; \text{GPa}
+\end{equation*}
+
+\subsubsection*{Below the boundary}
+\begin{equation*}
+    12.76\times(11.03^2 - \frac{4}{3}\times 3.50^2) = 1344 \; \text{GPa}
+\end{equation*}

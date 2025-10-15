@@ -1,0 +1,34 @@
+\section*{Problem 4}
+Show that the principal stress axes always coincide with the principal strain axes for isotropic media. In other words, show that if $\mathbf{x}$ is an eigenvector of $\mathbf{e}$, then it is also an eigenvector of $\boldsymbol{\tau}$.
+
+\subsection*{Solution}
+
+We use the relationship
+\begin{equation*}
+    \boldsymbol{\tau} = 
+    \lambda \text{tr}(\mathbf{e})\mathbf{I} +
+    2\mu \mathbf{e}
+\end{equation*}
+and the definition of eigenvectors/eigenvalues of a matrix, $\mathbf{ex} = a \mathbf{x}$, using $a$ rather than the more traditional $\lambda$ to avoid confusion. Note that the trace of a matrix is a scalar.
+\begin{align*}
+    \boldsymbol{\tau}\mathbf{x} &= (\lambda \text{tr}(\mathbf{e})\mathbf{I} + 2\mu \mathbf{e}) \mathbf{x} \\
+    &= \lambda \text{tr}(\mathbf{e})\mathbf{I} \mathbf{x} + 
+    2\mu \mathbf{e}\mathbf{x} \\
+    &= \lambda \text{tr}(\mathbf{e})\mathbf{x} + 
+    2\mu a \mathbf{x} \\
+    &= (\lambda \text{tr}(\mathbf{e}) + 
+    2\mu a) \mathbf{x} \\
+    &= b \mathbf{x}
+\end{align*}
+So $\mathbf{x}$ is an eigenvector of $\boldsymbol{\tau}$ with the eigenvalue of $b = (\lambda \text{tr}(\mathbf{e}) + 2\mu a)$.\\
+
+From eqn. 2.30 in the book we can calculate that $\text{tr}(\boldsymbol{\tau}) = 3\lambda\text{tr}(\mathbf{e}) + 2 \mu \text{tr}(\mathbf{e})$ meaning that 
+\begin{equation*}
+    \text{tr}(\mathbf{e}) = \frac{\text{tr}(\boldsymbol{\tau})}{3\lambda + 2\mu}
+\end{equation*}
+
+giving us the eiginvalue of $\boldsymbol{\tau}$, $b$ corresponding to the eigenvector $\mathbf{x}$
+
+\begin{equation*}
+    b = \frac{\lambda}{3\lambda + 2\mu} \text{tr}(\boldsymbol{\tau}) + 2\mu a
+\end{equation*}

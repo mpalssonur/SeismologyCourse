@@ -1,0 +1,95 @@
+\section*{Problem 1}
+Assume that the horizontal components of the 2-D stress tensor are
+\begin{equation*}
+\boldsymbol{\tau} = 
+    \begin{bmatrix}
+        \tau_{xx} & \tau_{xy} \\
+        \tau_{yx} & \tau_{yy}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        -30 & -20 \\
+        -20 & -40
+    \end{bmatrix}
+    \text{MPa}
+\end{equation*}
+
+\textbf{(a)} Compute the normal and shear stresses on a fault that strikes 10° east of north.
+
+\textbf{(b)} Compute the principal stresses, and give the azimuths (in degrees east of north) of the maximum and minimum compressional stress axes.
+
+\subsection*{(a) Solution}
+We have 
+\begin{equation*}
+    \hat{\mathbf{n}} = 
+    \begin{bmatrix}
+        \cos(10^{\circ}) \\
+        -\sin(10^{\circ})
+    \end{bmatrix}
+    \approx 
+    \begin{bmatrix}
+        0.9848 \\
+        -0.1736
+    \end{bmatrix}
+\end{equation*}
+And 
+\begin{equation*}
+    \mathbf{t}(\hat{\mathbf{n}}) = \boldsymbol{\tau}\hat{\mathbf{n}} \approx
+    \begin{bmatrix}
+        -30 & -20 \\
+        -20 & -40
+    \end{bmatrix}
+    \begin{bmatrix}
+        0.9848 \\
+        -0.1736
+    \end{bmatrix}
+    \approx
+    \begin{bmatrix}
+        -26.0713 \\
+        -12.7502
+    \end{bmatrix}
+\end{equation*}
+This gives us 
+\begin{equation*}
+    t_N = \mathbf{t}(\hat{\mathbf{n}}) \cdot \hat{\mathbf{n}} \approx 
+    \begin{bmatrix}
+        -26.0713 \\
+        -12.7502
+    \end{bmatrix}
+    \cdot
+    \begin{bmatrix}
+        0.9848 \\
+        -0.1736
+    \end{bmatrix}
+    \approx -23.4611
+\end{equation*}
+And 
+\begin{equation*}
+    t_S = \sqrt{\norm{\mathbf{t}(\hat{\mathbf{n}})}^2 - t_N^2} \approx 17.0837
+\end{equation*}
+
+
+\subsection*{(b) Solution}
+
+To find the principal stresses we need the eigenvalues of $\boldsymbol{\tau}$. Using Python we find them to be $\lambda_1 = -55.6155$ and $\lambda_2 = -14.3845$. The associated eigenvectors are 
+\begin{equation*}
+    \mathbf{u}^{(1)} \approx
+    \begin{bmatrix}
+        0.6154 \\
+        0.7882
+    \end{bmatrix}
+    , \quad \text{and} \quad
+    \mathbf{u}^{(2)} \approx
+    \begin{bmatrix}
+        0.7882 \\
+        -0.6154
+    \end{bmatrix}
+\end{equation*}
+
+The azimuth in degrees east of north of the maximum compressional stress axis is 
+\begin{equation*}
+    \sin^{-1}\left( \frac{\mathbf{u}^{(1)}_x}{\norm{\mathbf{u}^{(1)}}} \right) \approx
+    \sin^{-1}\left(\frac{0.6154}{1}\right) \approx 
+    \sin^{-1}\left( 0.6154\right) = 37.9819^{\circ}
+\end{equation*}
+As for the minimum compressional stress axis it will be perpendicular to the maximum compressional stress axis and inspection reveals that the azimuth in degrees east of north is $37.9819^{\circ} + 90^{\circ} = 127.9819$

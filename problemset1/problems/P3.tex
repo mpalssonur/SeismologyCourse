@@ -1,0 +1,32 @@
+\section*{Problem 3}
+The figure shows a vertical-component seismogram of the 1989 Loma Rieata earthquate recorded in Finland. 
+
+\textbf{(a)} Estimate the dominant period T, of the surface wave from its first ten cycles. Then compute the frequency $f = 1/T$.
+
+\textbf{(b)} Make an estimate of the \textit{maximum} surface-wave strain recorded at this site. Hints: 1 micron = $10^{-6}$m, assume the Rayleigh surface wave phase velocity at the dominant period is 3.9 km/s.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{../info/PeterShearer_fig.2_5.jpg}
+\end{figure}
+
+
+\subsection*{(a) Solution}
+Counting the first 10 wavetroughs we see that $10T \approx 350\text{s}$ so $T \approx 35 \text{s}$ and $f = 1/T \approx 2.9\times 10^{-2}\text{Hz}$
+
+\subsection*{(b) Solution}
+
+We approximate the displacement with a wave 
+\begin{equation*}
+    \mathbf{u}(\mathbf{x}, t) = A\text{sin}[2\pi f (t - x/c)]
+\end{equation*}
+Giving us displacement
+\begin{equation*}
+    \frac{\partial u_z}{\partial x}=\frac{-2\pi fA}{c}\text{cos}[2\pi f(t-x/c)]
+\end{equation*}
+Since the range of cosine is $[-1,1]$ we have the maximum displacement
+\begin{equation*}
+    d_{max} = \frac{2\pi fA}{c}
+\end{equation*}
+
+From the figure we estimate $A \approx 300$  \text{micron} $= 3 \times 10^{-4}\text{m}$. With the previously calculated $f$ and the given value for $c$ this gives us a maximum displacement of $1.4\times10^{-8}$

@@ -1,0 +1,37 @@
+\section*{Problem 7}
+
+What is the $P/S$ velocity ratio for a rock with a Poisson's ratio of 0.30?
+
+\subsection*{Solution}
+
+Take the wave speeds of P and S waves, $\alpha$ and $\beta$ and find the ratio
+
+\begin{equation*}
+    \frac{\alpha}{\beta} = 
+    \frac{\sqrt{\frac{\lambda+2\mu}{\rho}}}{\sqrt{\frac{\mu}{\rho}}} =
+    \sqrt{\frac{\lambda + 2\mu}{\mu}} = \sqrt{\frac{\lambda}{\mu} + 2}
+\end{equation*}
+
+Now we look at the ratio of Lamès parameters in terms of Poisson's ratio
+
+\begin{equation*}
+    \frac{\lambda}{\mu} = 
+    \frac{\frac{E\nu}{(1+\nu)(1-2\nu)}}{\frac{E}{2(1+\nu)}} = 
+    \frac{2\nu}{1-2\nu}
+\end{equation*}
+
+Plugging this back in we get
+
+\begin{equation*}
+    \frac{\alpha}{\beta} = 
+    \sqrt{\frac{2\nu}{1-2\nu} + \frac{2 - 4\nu}{1 - 2\nu}} = 
+    \sqrt{\frac{2 - 2\nu}{1 - 2\nu}}
+\end{equation*}
+
+Plugging in the value of Poisson's ratio
+
+\begin{equation*}
+    \frac{\alpha}{\beta} = 
+    \sqrt{\frac{2 - 0.6}{1 - 0.6}} = \sqrt{\frac{1.4}{0.4}} =
+    \sqrt{\frac{7}{2}} \approx 1.9
+\end{equation*}
