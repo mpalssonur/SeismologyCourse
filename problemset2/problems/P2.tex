@@ -1,0 +1,50 @@
+\section*{Problem 2}
+
+Figure 3.6 in Shearer plots a harmonic plane wave at $t=0$, traveling in the x direction at 5 km/s.
+
+\textbf{(a)} Write down an equation for this wave that describes displacement $\mathbf{u}$ as a funciton of $x$ and $t$
+
+\textbf{(b)}
+
+\textbf{(c)}
+
+\textbf{(d)} What is the maximum strain for this wave?
+
+\subsection*{Solution (a)}
+
+We are looking to write the wave in the form $\mathbf{u}(x,t) = A\sin(\omega t - kx)$. We choose sin because the wave is 0 at $t = 0, x = 0$.
+
+From the figure we can see that $A = 0.04$, $\lambda = 8000$m, and $v = 5000$m/s\\
+Now we can calculate the period $T = \frac{\lambda}{v} = \frac{8000}{5000} = 1.6$s, the angular velocity $\omega = \frac{2\pi}{T} = \frac{5}{4}\pi = 1.25\pi \text{s}^{-1}$ and the wave number $k = \frac{2\pi}{\lambda} = 2.5\times 10^{-4}\pi$. So we have the equation
+\begin{equation*}
+    \mathbf{u}(x,t) = 0.04\sin(1.25\pi t - 2.5\times 10^{-4}\pi x)
+\end{equation*}
+
+\subsection*{Solution (b)}
+$\sin(x) = cos(x - \frac{\pi}{2})$. So we can write 
+\begin{equation*}
+    \mathbf{u}(x,t) = 0.04\cos(1.25\pi t - 2.5\times 10^{-4}\pi x - \frac{\pi}{2})
+\end{equation*}
+
+Why we would do this is beyond me
+
+\subsection*{Solution (c)}
+
+We plug in
+
+\begin{align*}
+    \mathbf{u}(6000,30) &= 0.04\sin(1.25\pi 30 - 2.5\times 10^{-4}\pi 6000)\\
+    &= 0.04\sin(\frac{150}{4} \pi - \frac{6}{4}\pi) \\
+    &= 0.04\sin(\frac{144}{4}\pi) = 0.04\sin(36\pi) = 0
+\end{align*}
+
+\subsection*{Solution (d)}
+
+Due to $\mathbf{u}(x,t)$ having only one spatial dimension we only need to calculate 
+\begin{align*}
+    \mathbf{e}_{xx} &= \frac{\partial \mathbf{u}(x,t)}{\partial x}\\
+    &= 0.04 * (-2.5 \times 10^{-4}\pi) \cos(1.25\pi t - 2.5\times 10^{-4}\pi x)\\
+    &=- \pi \times 10^{-5} \cos(1.25\pi t - 2.5\times 10^{-4}\pi x)
+\end{align*}
+
+Given that cosine takes values on $[-1,1]$. This funciton achieves the maximum of $kA = \pi \times 10^{-5}$

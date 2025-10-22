@@ -1,0 +1,62 @@
+\section*{Problem 3}
+Consider two types of monochromatic plane waves propagating in the x direction in a uniform medium: 
+
+\textbf{(a)} $P$ wave in which $u_x = A\sin(\omega t-kx)$,
+
+\textbf{(b)} $S$ wave with displacements in the $y$ direction, i.e., $u_y = A\sin(\omega t-kx)$
+
+For each case, derive expressions for the non-zero components of the stress tensor.
+
+\subsection*{Solution (a)}
+
+Of all the partial derivatives of $\mathbf{u}$, only the x derivative of the x component $\partial_x u_x = -kA\cos(\omega t-kx)$ is non-zero. We will avoid writing out the full expression to save space, writing the strain and stress in terms of $\partial_x u_x$. We get the strain tensor:
+
+\begin{equation*}
+    \mathbf{e} = 
+    \begin{bmatrix}
+        \partial_x u_x & \frac{1}{2}\partial_x u_x & \frac{1}{2}\partial_x u_x \\
+        \frac{1}{2}\partial_x u_x & 0 & 0\\
+        \frac{1}{2}\partial_x u_x & 0 & 0
+    \end{bmatrix}
+\end{equation*}
+
+We see that $\text{tr}(\mathbf{e}) = \partial_x u_x$ so eqn. 2.30 from Shearer gives us the stress tensor:
+
+\begin{equation*}
+    \boldsymbol{\tau} = 
+    \begin{bmatrix}
+        (\lambda + 2\mu) \partial_x u_x & \mu \partial_x u_x & \mu \partial_x u_x\\
+        \mu \partial_x u_x  & \lambda \partial_x u_x & 0 \\
+        \mu \partial_x u_x & 0 & \lambda \partial_x u_x 
+    \end{bmatrix}
+    = \partial_x u_x 
+    \begin{bmatrix}
+        (\lambda + 2\mu) & \mu  & \mu \\
+        \mu   & \lambda & 0 \\
+        \mu  & 0 & \lambda 
+    \end{bmatrix}
+\end{equation*}
+
+\subsection*{Solution (b)}
+
+For the S wave, only the y component of $\mathbf{u}$ is non-zero and it only depends on x. Therefore, of the partial derivatives of the components of $\mathbf{u}$, only $\partial_xu_y = -kA\cos(\omega t-kx)$ is non-zero. This gives us the strain tensor:
+
+\begin{equation*}
+    \mathbf{e} = 
+    \begin{bmatrix}
+        0 & \frac{1}{2}\partial_x u_y & 0 \\
+        \frac{1}{2}\partial_x u_y & 0 & 0\\
+        0 & 0 & 0
+    \end{bmatrix}
+\end{equation*}
+
+We see that $\text{tr}(\mathbf{e}) = 0$ so eqn. 2.30 from Shearer gives us the stress tensor:
+
+\begin{equation*}
+    \boldsymbol{\tau} = 
+    \begin{bmatrix}
+        0 & \mu\frac{1}{2}\partial_x u_y & 0 \\
+        \mu\frac{1}{2}\partial_x u_y & 0 & 0\\
+        0 & 0 & 0
+    \end{bmatrix}
+\end{equation*}
